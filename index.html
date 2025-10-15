@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>ApertureOS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sansation&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <img src="logo.svg" alt="ApertureOS Logo" class="logo">
+
+    <!-- Mobile Menu Toggle (CSS-only) -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+    <label for="menu-toggle" class="menu-icon-label">
+      <img src="hamburger.svg" alt="Menu" class="menu-icon">
+    </label>
+
+    <!-- Fullscreen Menu (overlay) -->
+    <div class="nav-links">
+      <label for="menu-toggle" class="close-icon">
+        <img src="x.svg" alt="Close" class="close-icon-img">
+      </label>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Normal desktop navigation -->
+    <ul class="desktop-nav">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#download">Download</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="home" class="hero">
+    <h1>ApertureOS</h1>
+    <p>ApertureOS is a New Linux-based Distribution established in 2025 with the only goal of providing a wonderful, simple and intuitive user-friendly experience, making it the perfect choice for both newbies and experienced users. ApertureOS provides a set of tools like Blink, a powerful source-based package manager, and Pulse, its own innovative installer, capable of customizing your system in just a few clicks.</p>
+    <a href="#download" class="btn">Get ApertureOS</a>
+    <div class="screenshot">
+      <img src="screenshot.png" alt="ApertureOS Preview Screenshot">
+    </div>
+  </section>
+  <section id="about">
+    <h2>About ApertureOS</h2>
+    <p>ApertureOS got established in 2025 by Elia73333 on the <a target="_blank" href="https://discord.gg/linux">All Things Linux</a> who wanted to create a Linux distribution that prioritizes user experience and simplicity. ApertureOS aims to provide a seamless and enjoyable computing experience for users of all skill levels.</p>
+  </section>
+  <section id="features">
+    <h2>Features</h2>
+    <ul class="features-list">
+      <li><strong>Performance:</strong> Fully optimized ISO file and filesystem with little to no bloat while still providing
+        the right tools for a wonderful user experience.</li>
+      <li><strong>Privacy:</strong> ApertureOS will <strong>NEVER</strong> collect any telemetry or user data.</li>
+      <li><strong>Tools:</strong> ApertureOS provides tools such as Pulse, its own TUI/GUI installer that helps users customize
+        their operating system with ease in every way possible.</li>
+      <li><strong>Community:</strong> ApertureOS relies on community feedback to grow and fix its bugs, if you
+        notice a bug, go open an Issue in our <a target="_blank" href="https://github.com/Aperture-OS">Github</a>.</li>
+    </ul>
+  </section>
+  <section id="download">
+    <h2>Download ApertureOS</h2>
+    <p>Download the stable version, or try out the Nightly Version, to experience the latest features and improvements.</p>
+    <div class="downloads">
+      <a href="unreleased.html" class="btn">Stable (ALPHA v0.0.0)</a>
+      <a href="unreleased.html" class="btn">Nightly</a>
+      <a href="https://github.com/Aperture-OS" class="btn">Source (Github)</a>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>We’d love to hear from you. 
+      Email us at <a href="mailto:apertureos.main@outlook.com">apertureos.main@outlook.com</a>.</p>
+    <p>Or join our servers:</p>
+    <ul>
+      <li><a target="_blank" href="unreleased.html">ApertureOS Official Server</a></li>
+      <li><a target="_blank" href="https://discord.gg/linux">All Things Linux (#projects)</a></li>
+      <li><a target="_blank" href="https://libera.chat/">IRC Server (irc.libera.chat #apertureos)</a></li>
+      <p class="cloakNotice"><strong> ⚠ Make Sure to Cloak yourself, your IP Address could get leaked!</strong></p>
+      <p class="cloakNotice"><strong> Follow <a class="cloakNoticeBold" target="_blank" href="https://libera.chat/guides/cloaks">THIS</a> guide if you need help with cloaking your IP on Libera Chat.</strong></p>
+    </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <img class="footer-logo" src="logo.svg" alt="ApertureOS Logo">
+    <div class="footer-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#features">Features</a>
+      <a href="index.html#download">Download</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tos.html">Terms Of Service</a>
+      <a href="privacy.html">Privacy Statement</a>
+    </div>
+    <p class="copyright">© 2025 ApertureOS. Designed for the future of computing.</p>
+  </div>
+</footer>
+</body>
+</html>
