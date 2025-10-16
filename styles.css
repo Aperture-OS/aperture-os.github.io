@@ -191,27 +191,39 @@ p, a { color: #afb4c4; }
 .btn:hover {
   background: #6d7592;
 }
-/* Style for Features and Contact lists */
+/* ===== DISCORD-LIKE LIST STYLING (Features + Contact) ===== */
 .features-list,
 .contact-list {
-  list-style: none;          /* removes the • bullets */
-  margin: 0;
-  padding: 0.75em 1em;       /* space inside the border */
-  border: 1px solid #ccc;    /* border around the whole list */
-  border-radius: 8px;        /* optional rounded corners */
-  background-color: #f9f9f9; /* optional light background */
+  list-style: none; /* remove bullet points */
+  margin: 1.2em 0;
+  padding: 0.75em 1em;
+  background: #1f212b; /* same tone as footer / fits dark theme */
+  border-left: 4px solid #45455e; /* match button color */
+  border-radius: 6px;
 }
 
-/* Optional: spacing and separators between items */
 .features-list li,
 .contact-list li {
-  padding: 0.4em 0;
-  border-bottom: 1px solid #eee;
+  padding: 0.5em 0;
+  color: #d4d8e0;
 }
 
-.features-list li:last-child,
-.contact-list li:last-child {
-  border-bottom: none;
+.features-list li + li,
+.contact-list li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* subtle divider */
+}
+
+/* Ensure links inside lists match your theme */
+.features-list a,
+.contact-list a {
+  color: #8aa8ff;
+  text-decoration: underline;
+}
+
+.features-list a:hover,
+.contact-list a:hover {
+  color: #aabaff;
+  text-decoration: none;
 }
 
 /* ===== FOOTER ===== */
