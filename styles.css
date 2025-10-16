@@ -191,29 +191,33 @@ p, a { color: #afb4c4; }
 .btn:hover {
   background: #6d7592;
 }
+
+
 /* ===== DISCORD-LIKE LIST STYLING (Features + Contact) ===== */
 .features-list,
 .contact-list {
-  list-style: none; /* remove bullet points */
+  list-style: none; /* remove bullets */
   margin: 1.2em 0;
   padding: 0.75em 1em;
-  background: #1f212b; /* same tone as footer / fits dark theme */
-  border-left: 4px solid #45455e; /* match button color */
+  background-color: #1f212b; /* darker, matches site theme */
+  border-left: 4px solid #45455e; /* same color as .btn background */
   border-radius: 6px;
 }
 
+/* individual list items */
 .features-list li,
 .contact-list li {
   padding: 0.5em 0;
   color: #d4d8e0;
 }
 
+/* subtle dividers between items */
 .features-list li + li,
 .contact-list li + li {
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* subtle divider */
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Ensure links inside lists match your theme */
+/* links inside lists */
 .features-list a,
 .contact-list a {
   color: #8aa8ff;
