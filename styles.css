@@ -219,14 +219,7 @@ p, a { color: #afb4c4; }
 /* links inside lists */
 .features-list a,
 .contact-list a {
-  color: #8aa8ff;
   text-decoration: underline;
-}
-
-.features-list a:hover,
-.contact-list a:hover {
-  color: #aabaff;
-  text-decoration: none;
 }
 
 /* ===== FOOTER ===== */
