@@ -193,33 +193,42 @@ p, a { color: #afb4c4; }
 }
 
 
-/* ===== DISCORD-LIKE LIST STYLING (Features + Contact) ===== */
+/* ===== DISCORD-STYLE LISTS (Features + Contact) ===== */
 .features-list,
 .contact-list {
-  list-style: none; /* remove bullets */
+  list-style: none; /* remove default bullets */
   margin: 1.2em 0;
-  padding: 0.75em 1em;
-  border-left: 4px solid #45455e; /* same color as .btn background */
-  border-radius: 6px;
+  padding: 0;
 }
 
-/* individual list items */
 .features-list li,
 .contact-list li {
-  padding: 0.5em 0;
+  position: relative;
+  margin: 0.6em 0;
+  padding: 0.6em 1em;
+  background: none; /* no white background */
   color: #d4d8e0;
+  border-left: 4px solid #45455e; /* same color as your buttons */
+  border-radius: 3px;
 }
 
-/* subtle dividers between items */
-.features-list li + li,
-.contact-list li + li {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+/* optional subtle hover */
+.features-list li:hover,
+.contact-list li:hover {
+  background: rgba(255, 255, 255, 0.04);
 }
 
-/* links inside lists */
+/* links inside list items */
 .features-list a,
 .contact-list a {
+  color: #8aa8ff;
   text-decoration: underline;
+}
+
+.features-list a:hover,
+.contact-list a:hover {
+  color: #aabaff;
+  text-decoration: none;
 }
 
 /* ===== FOOTER ===== */
