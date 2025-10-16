@@ -191,10 +191,7 @@ p, a { color: #afb4c4; }
 .btn:hover {
   background: #6d7592;
 }
-.list{
-  border-left: 2px;
-  border-left-style: #6d7592;
-}
+
 
 /* ===== FOOTER ===== */
 footer {
