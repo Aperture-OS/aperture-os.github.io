@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
-    <title>ApertureOS</title>
+    <title>ApertureOS - User-friendly, super customizable Linux distro.</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Sansation&display=swap"
       rel="stylesheet"
@@ -15,45 +15,11 @@
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   </head>
   <body>
-    <header>
-      <nav>
-        <img src="assets/icons/logo.svg" alt="ApertureOS Logo" class="logo" />
-
-        <!-- Mobile Menu Toggle (CSS-only) -->
-        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-        <label for="menu-toggle" class="menu-icon-label">
-          <img src="assets/icons/hamburger.svg" alt="Menu" class="menu-icon" />
-        </label>
-
-        <!-- Fullscreen Menu (overlay) -->
-        <div class="nav-links">
-          <label for="menu-toggle" class="close-icon">
-            <img src="assets/icons/x.svg" alt="Close" class="close-icon-img" />
-          </label>
-          <ul>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#features">Features</a></li>
-            <li><a href="index.html#download">Download</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Normal desktop navigation -->
-        <ul class="desktop-nav">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#features">Features</a></li>
-          <li><a href="index.html#download">Download</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <!-- Header injected by header.js -->
 
     <main>
       <section id="home" class="hero">
-        <h1>ApertureOS</h1>
-
+        <h1 id="typing-text" class="title"></h1>
         <p>
           ApertureOS is a New Linux-based Distribution established in 2025 with
           the only goal of providing a wonderful, simple and intuitive
@@ -63,9 +29,12 @@
           innovative installer, capable of customizing your system in just a few
           clicks.
         </p>
-        <a href="#download" class="btn">Get ApertureOS</a>
+        <a href="download.html" class="btn">Get ApertureOS</a>
         <div class="screenshot">
-          <img src="assets/previews/screenshot.png" alt="ApertureOS Preview Screenshot" />
+          <img
+            src="assets/previews/screenshot.png"
+            alt="ApertureOS Preview Screenshot"
+          />
         </div>
       </section>
 
@@ -108,21 +77,6 @@
         </ul>
       </section>
 
-      <section id="download">
-        <h2>Download ApertureOS</h2>
-        <p>
-          Download the stable version, or try out the Nightly Version, to
-          experience the latest features and improvements.
-        </p>
-        <div class="downloads">
-          <a href="unreleased.html" class="btn">Stable (ALPHA v0.0.0)</a>
-          <a href="unreleased.html" class="btn">Nightly</a>
-          <a href="https://github.com/Aperture-OS" class="btn"
-            >Source (Github)</a
-          >
-        </div>
-      </section>
-
       <section id="contact">
         <h2>Contact</h2>
         <p>
@@ -135,7 +89,7 @@
         <ul class="contact-list">
           <li>
             <a target="_blank" href="unreleased.html"
-              >ApertureOS Official Server</a
+              ><strike>ApertureOS Official Discord Server</strike> </a
             >
           </li>
           <li>
@@ -150,8 +104,8 @@
           </li>
         </ul>
         <p class="cloakNotice">
-          <strong>
-            ⚠ Make Sure to Cloak yourself, your IP Address could get
+          <strong
+            >⚠ Make Sure to Cloak yourself, your IP Address could get
             leaked!</strong
           >
         </p>
@@ -164,29 +118,53 @@
               href="https://libera.chat/guides/cloaks"
               >THIS</a
             >
-            guide if you need help with cloaking your IP on Libera Chat.</strong
-          >
+            guide if you need help with cloaking your IP on Libera Chat.
+          </strong>
         </p>
       </section>
     </main>
+    <script>
+      (() => {
+        let TypingSpeed = 80;
+        let NxtMsgDelay = 1500;
+        let CharacterPos = 0;
+        let MsgBuffer = "";
+        let MsgIndex = 0;
+        let delay;
+        let id = document.getElementById("typing-text");
+        let messages = [
+          "ApertureOS - Simple, Fast, Reliable.",
+          "ApertureOS, the future of Linux.",
+          "Join the ApertureOS community today!",
+        ];
 
-    <footer>
-      <div class="footer-content">
-        <img class="footer-logo" src="assets/icons/logo.svg" alt="ApertureOS Logo" />
-        <div class="footer-links">
-          <a href="index.html#home">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#download">Download</a>
-          <a href="index.html#contact">Contact</a>
-          <a href="tos.html">Terms Of Service</a>
-          <a href="privacy.html">Privacy Statement</a>
-        </div>
-        <p class="copyright">
-          © Copyright 2025 ApertureOS. Must include copyright notice in any
-          fork!
-        </p>
-      </div>
-    </footer>
+        const StartTyping = () => {
+          if (CharacterPos != messages[MsgIndex].length) {
+            MsgBuffer += messages[MsgIndex].charAt(CharacterPos);
+            id.textContent =
+              MsgBuffer +
+              (CharacterPos != messages[MsgIndex].length - 1 ? "_" : "");
+            delay = TypingSpeed;
+          } else {
+            delay = NxtMsgDelay;
+            MsgBuffer = "";
+            CharacterPos = -1;
+            if (MsgIndex != messages.length - 1) {
+              MsgIndex++;
+            } else {
+              MsgIndex = 0;
+            }
+          }
+          CharacterPos++;
+          setTimeout(StartTyping, delay);
+        };
+
+        StartTyping();
+      })();
+    </script>
+
+    <script src="footer.js" defer></script>
+    <script src="header.js" defer></script>
+    
   </body>
 </html>

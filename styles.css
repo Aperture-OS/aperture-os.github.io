@@ -1,6 +1,21 @@
 /* ======================================================
-   APERTUREOS - styles.css © Copyright 2025 ApertureOS. Must include copyright notice in any fork!
+   APERTUREOS - styles.css © Copyright 2025 ApertureOS
 ====================================================== */
+:root {
+  --bg-color: #191b22;
+  --text-color: #d4d8e0;
+  --accent-color: #45455e;
+  --btn-hover: #6d7592;
+  --link-color: #8aa8ff;
+  --link-hover: #aabaff;
+  --footer-bg: #1f212b;
+  --footer-border: #383649;
+}
+
+/* Transition for smooth theme change */
+body, header, footer, main, section, .btn, a, .code-block {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
 
 * {
   box-sizing: border-box;
@@ -95,7 +110,7 @@ nav {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-30px);
-  transition: opacity 0.4s ease, transform 0.4s ease; /* ✅ Smooth slide-in */
+  transition: opacity 0.4s ease, transform 0.4s ease;
   z-index: 999;
 }
 
@@ -142,19 +157,16 @@ nav {
     margin-left: auto;
   }
 
-  /* When menu is checked — fade + slide down */
   .menu-checkbox:checked ~ .nav-links {
     opacity: 1;
-    transform: translateY(0); /* ✅ slide down from top */
+    transform: translateY(0);
     pointer-events: auto;
   }
 
-  /* Hide hamburger when open */
   .menu-checkbox:checked + .menu-icon-label {
     display: none;
   }
 
-  /* Show close icon when open */
   .menu-checkbox:checked ~ .nav-links .close-icon {
     display: block;
   }
@@ -163,9 +175,11 @@ nav {
 /* ===== MAIN CONTENT ===== */
 main {
   margin-top: 90px;
+  padding: 0 1.5rem;
 }
+
 section {
-  padding: 3rem 1.5rem;
+  padding: 3rem 0;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -182,14 +196,18 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   color: #d4d8e0;
 }
-p,
-a {
+.title{
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+p, a, li{
   color: #afb4c4;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .btn {
@@ -201,46 +219,54 @@ a {
   font-weight: bold;
   display: inline-block;
   margin-top: 1.2rem;
+  cursor: pointer;
+  font-size: 1.15rem;
 }
 
 .btn:hover {
   background: #6d7592;
 }
 
-/* ===== DISCORD-STYLE LISTS (Features + Contact) ===== */
-.features-list,
-.contact-list {
-  list-style: none; /* remove default bullets */
+/* ===== FILE UPLOAD ===== */
+.file-upload-wrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-upload-wrapper label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ===== LISTS ===== */
+.features-list, .contact-list {
+  list-style: none;
   margin: 1.2em 0;
   padding: 0;
 }
 
-.features-list li,
-.contact-list li {
+.features-list li, .contact-list li {
   position: relative;
   margin: 0.6em 0;
   padding: 0.6em 1em;
-  background: none; /* no white background */
-  color: #d4d8e0;
-  border-left: 4px solid #45455e; /* same color as your buttons */
+  border-left: 4px solid #45455e;
   border-radius: 3px;
 }
 
-/* optional subtle hover */
-.features-list li:hover,
-.contact-list li:hover {
+.features-list li:hover, .contact-list li:hover {
   background: rgba(255, 255, 255, 0.04);
 }
 
-/* links inside list items */
-.features-list a,
-.contact-list a {
+.features-list a, .contact-list a {
   color: #8aa8ff;
   text-decoration: underline;
 }
 
-.features-list a:hover,
-.contact-list a:hover {
+.features-list a:hover, .contact-list a:hover {
   color: #aabaff;
   text-decoration: none;
 }
@@ -257,23 +283,28 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .footer-logo {
   margin-bottom: 1rem;
   max-width: 20%;
 }
+
 .footer-links a {
   color: #afb4c4;
   margin: 0 0.75rem;
   text-decoration: none;
 }
+
 .footer-links a:hover {
   color: #8aa8ff;
 }
+
 .copyright {
   margin-top: 1.5rem;
   color: #6d7592;
   font-size: 0.9rem;
 }
+
 /* ===== CLOAK NOTICE ===== */
 .cloakNotice {
   color: #de3f31;
@@ -301,3 +332,88 @@ footer {
   color: #ff6655;
   text-decoration: none;
 }
+
+/* ===== DOWNLOAD / GUIDE / CODE BLOCKS ===== */
+.downloads, .file-upload-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.code-block {
+  position: relative;
+  background-color: #2b2f3a;
+  color: #d4d8e0;
+  border-radius: 8px;
+  margin: 1rem 0;
+  padding: 1rem;
+  font-family: monospace;
+}
+
+.code-wrapper {
+  overflow-x: auto;
+  padding-right: 1rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #45455e;
+  color: #d4d8e0;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background: #6d7592;
+}
+
+.copy-feedback {
+  font-size: 0.9rem;
+  color: #8aa8ff;
+  margin-top: 0.3rem;
+  min-height: 1em;
+}
+
+/* ===== GUIDE LISTS ===== */
+.guide ol {
+  padding-left: 1.5rem;
+  margin-left: 0;
+}
+
+.guide ol li {
+  margin-bottom: 0.8rem;
+}
+
+.guide ol li ul {
+  padding-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+/* ===== MOBILE ADJUSTMENTS ===== */
+@media (max-width: 850px) {
+  main {
+    padding: 0 1rem;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  .btn, .file-upload-wrapper, .downloads {
+    width: 100%;
+    max-width: 400px;
+    margin: 0.5rem auto;
+  }
+
+  .code-block {
+    padding: 1rem;
+  }
+}
+
+
