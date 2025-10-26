@@ -207,7 +207,7 @@ h1, h2, h3 {
 p, a, li{
   color: #afb4c4;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .btn {
@@ -220,7 +220,7 @@ p, a, li{
   display: inline-block;
   margin-top: 1.2rem;
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .btn:hover {
