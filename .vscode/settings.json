@@ -1,5 +1,12 @@
 {
     "conventionalCommits.scopes": [
-        "Javascript Added"
+        "api",
+        "app",
+        "config",
+        "docs",
+        "tests",
+        "build",
+        "ci",
+        "scripts"
     ]
 }
