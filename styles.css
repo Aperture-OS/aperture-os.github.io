@@ -416,4 +416,39 @@ footer {
   }
 }
 
+/* ===== PRIVACY TEXT STYLING ===== */
+.privacy-text {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.8; /* line spacing within a paragraph */
+}
 
+.privacy-text p {
+  display: block;
+  margin: 1rem 0 1.5rem 0; /* space above and below paragraph */
+}
+
+.privacy-text br {
+  display: block;
+  margin-bottom: 1rem; /* space for manual line breaks */
+}
+
+.privacy-text h1,
+.privacy-text h2,
+.privacy-text h3,
+.privacy-text .heading_1,
+.privacy-text .heading_2 {
+  margin: 2rem 0 1.5rem 0; /* spacing above and below headings */
+  font-weight: bold;
+}
+
+.privacy-text ul,
+.privacy-text ol {
+  margin: 1.5rem 0 1.5rem 2.5rem;
+  padding: 0;
+}
+
+.privacy-text li {
+  margin-bottom: 1rem;
+  list-style: disc;
+}

@@ -31,7 +31,7 @@
       property="og:image"
       content="https://aperture-os.github.io/assets/icons/logo-og.png"
     />
-    <meta property="og:image:type" content="image/png" />
+
     <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://aperture-os.github.io" />
@@ -172,10 +172,12 @@
         let MsgIndex = 0;
         let delay;
         let id = document.getElementById("typing-text");
-        let messages = [
-          "ApertureOS - Simple, Fast, Reliable.",
-          "ApertureOS, the future of Linux.",
-          "Join the ApertureOS community today!",
+        let messages = [ // small messages here
+          "ApertureOS",
+		  "User-friendly Linux Distro",
+		  "Super Customizable",
+		  "Privacy-Focused",
+		  "Built for Everyone",
         ];
 
         const StartTyping = () => {
