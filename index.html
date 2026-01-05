@@ -59,7 +59,9 @@
 
     <main>
       <section id="home" class="hero">
-        <h1 id="typing-text" class="title"></h1>
+        <h1 id="title" class="title">
+          ApertureOS: Fast, Simple, User-friendly Linux distro
+        </h1>
         <p>
           ApertureOS is a New Linux-based Distribution established in 2025 with
           the only goal of providing a wonderful, simple and intuitive
@@ -80,14 +82,30 @@
 
       <section id="about">
         <h2>About ApertureOS</h2>
-        <p>
-          ApertureOS got established in 2025 by Elia73333 on the
+        <p style="padding-top: 0.5rem">
+          Founded in 2025 by Elia73333 on
           <a target="_blank" href="https://discord.gg/linux"
             >All Things Linux</a
           >
-          who wanted to create a Linux distribution that prioritizes user
-          experience and simplicity. ApertureOS aims to provide a seamless and
-          enjoyable computing experience for users of all skill levels.
+          ApertureOS is a Linux distribution built for simplicity, speed, and
+          ease of use. It comes with a clean interface, essential tools, and
+          reliable performance, making Linux approachable for users of all skill
+          levels.
+        </p>
+        <p style="padding-top: 0.5rem">
+          At the heart of ApertureOS is Blink, a source-based package manager
+          that allows users to build and manage software directly from source
+          code. Blink gives you full control over how packages are compiled and
+          optimized, making software management flexible, transparent, and
+          tailored to your system. Together, ApertureOS and Blink provide a
+          fast, customizable, and enjoyable Linux experience, whether you're
+          learning Linux, developing software, or just want a system that works
+          smoothly out of the box.
+        </p>
+        <p style="padding-top: 0.5rem">
+          Together, ApertureOS and Blink provide a fast, customizable, and
+          enjoyable Linux experience, whether you're learning Linux, developing
+          software, or just want a system that works smoothly out of the box.
         </p>
       </section>
 
@@ -95,24 +113,29 @@
         <h2>Features</h2>
         <ul class="features-list">
           <li>
-            <strong>Performance:</strong> Fully optimized ISO file and
-            filesystem with little to no bloat while still providing the right
-            tools for a wonderful user experience.
+            <strong>Performance:</strong> Fully optimized ISO and filesystem
+            with minimal bloat, while providing all the tools needed for a
+            smooth and enjoyable user experience.
           </li>
           <li>
-            <strong>Privacy:</strong> ApertureOS will
-            <strong>NEVER</strong> collect any telemetry or user data.
+            <strong>Privacy:</strong> ApertureOS <strong>never</strong> collects
+            telemetry or user data — your system, your control.
           </li>
           <li>
-            <strong>Tools:</strong> ApertureOS provides tools such as Pulse, its
-            own TUI/GUI installer that helps users customize their operating
-            system with ease in every way possible.
+            <strong>Tools:</strong> Includes handy tools like
+            <strong>Pulse</strong>, its own TUI/GUI installer, making it easy to
+            customize your system exactly how you want.
           </li>
           <li>
-            <strong>Community:</strong> ApertureOS relies on community feedback
-            to grow and fix its bugs, if you notice a bug, go open an Issue in
+            <strong>Community:</strong> ApertureOS grows with community
+            feedback. If you find a bug or have suggestions, open an issue on
             our
-            <a target="_blank" href="https://github.com/Aperture-OS">Github</a>.
+            <a
+              href="https://github.com/Aperture-OS"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >.
           </li>
         </ul>
       </section>
@@ -120,33 +143,39 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>
-          We’d love to hear from you. Email us at
+          We’d love to hear from you! Email us at
           <a href="mailto:apertureos.main@outlook.com"
             >apertureos.main@outlook.com</a
           >.
         </p>
-        <p>Or join our servers:</p>
+
+        <p>Or join our community servers:</p>
         <ul class="contact-list">
           <li>
-            <a target="_blank" href="https://discord.com/invite/rx82u93hGD"
-              >ApertureOS Official Discord Server</a
+            <a
+              href="https://discord.com/invite/rx82u93hGD"
+              target="_blank"
+              rel="noopener"
             >
+              ApertureOS Official Discord Server
+            </a>
           </li>
           <li>
-            <a target="_blank" href="https://discord.gg/linux"
-              >All Things Linux (#projects)</a
-            >
+            <a href="https://discord.gg/linux" target="_blank" rel="noopener">
+              All Things Linux (#projects)
+            </a>
           </li>
-          <li>
-            <a target="_blank" href="https://libera.chat/"
-              >IRC Server (irc.libera.chat #apertureos)</a
-            >
+          <!--<li>
+            <a href="https://libera.chat/" target="_blank" rel="noopener">
+              IRC Server (irc.libera.chat #apertureos)
+            </a>
           </li>
         </ul>
+
         <p class="cloakNotice">
           <strong
-            >⚠ Make Sure to Cloak yourself, your IP Address could get
-            leaked!</strong
+            >⚠ Make sure to cloak yourself — your IP address could be
+            visible!</strong
           >
         </p>
         <p class="cloakNotice">
@@ -154,56 +183,18 @@
             Follow
             <a
               class="cloakNoticeBold"
-              target="_blank"
               href="https://libera.chat/guides/cloaks"
-              >THIS</a
+              target="_blank"
+              rel="noopener"
+              style="text-decoration: none"
             >
-            guide if you need help with cloaking your IP on Libera Chat.
+              this guide
+            </a>
+            if you need help cloaking your IP on Libera Chat.
           </strong>
-        </p>
+        </p>-->
       </section>
     </main>
-    <script>
-      (() => {
-        let TypingSpeed = 80;
-        let NxtMsgDelay = 1500;
-        let CharacterPos = 0;
-        let MsgBuffer = "";
-        let MsgIndex = 0;
-        let delay;
-        let id = document.getElementById("typing-text");
-        let messages = [ // small messages here
-          "ApertureOS",
-		  "Simplest Linux Distro",
-		  "Super Customizable",
-		  "Privacy-Focused",
-		  "Built for Everyone",
-        ];
-
-        const StartTyping = () => {
-          if (CharacterPos != messages[MsgIndex].length) {
-            MsgBuffer += messages[MsgIndex].charAt(CharacterPos);
-            id.textContent =
-              MsgBuffer +
-              (CharacterPos != messages[MsgIndex].length - 1 ? "_" : "");
-            delay = TypingSpeed;
-          } else {
-            delay = NxtMsgDelay;
-            MsgBuffer = "";
-            CharacterPos = -1;
-            if (MsgIndex != messages.length - 1) {
-              MsgIndex++;
-            } else {
-              MsgIndex = 0;
-            }
-          }
-          CharacterPos++;
-          setTimeout(StartTyping, delay);
-        };
-
-        StartTyping();
-      })();
-    </script>
 
     <script src="footer.js" defer></script>
     <script src="header.js" defer></script>
