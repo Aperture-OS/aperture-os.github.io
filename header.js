@@ -1,5 +1,5 @@
 // Header HTML injection
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const headerHTML = `
     <header>
       <nav>
@@ -34,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       </nav>
     </header>
+
   `;
 
-  document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  document.body.insertAdjacentHTML("afterbegin", headerHTML);
 });

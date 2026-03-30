@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta
@@ -58,6 +58,26 @@
     <!-- Header injected by header.js -->
 
     <main>
+      <!-- REMOVE ON 30 APRIL 2026-->
+      <!-- REMOVE ON 30 APRIL 2026-->
+      <!-- REMOVE ON 30 APRIL 2026-->
+
+      <div
+        style="
+          background-color: #ffcc00;
+          color: #000;
+          text-align: center;
+          padding: 0.6rem;
+          font-weight: 600;
+        "
+      >
+        Our Terms of Service and Privacy Policy were updated on March 30, 2026.
+        Please review them carefully via the links in the footer.
+      </div>
+
+      <!-- REMOVE ON 30 APRIL 2026-->
+      <!-- REMOVE ON 30 APRIL 2026-->
+      <!-- REMOVE ON 30 APRIL 2026-->
       <section id="download">
         <h1>Download ApertureOS</h1>
         <p>
@@ -144,7 +164,8 @@
                   <br />Replace <code>/dev/sdX</code> with your USB drive
                   identifier, and /path/to/apertureos.iso with the path to the
                   downloaded ISO file. Make sure to double-check the drive
-                  identifier to avoid data loss! (you can use <code>lsblk</code> to list drives.)
+                  identifier to avoid data loss! (you can use
+                  <code>lsblk</code> to list drives.)
                 </li>
                 <br />
               </ul>
@@ -188,9 +209,11 @@
                       <pre><code id="ddCommand">sudo blink update</code></pre>
                     </div>
                   </div>
-                  
                 </li>
-                <li>Install additional software or drivers as needed. Follow the documentations for more informations.</li>
+                <li>
+                  Install additional software or drivers as needed. Follow the
+                  documentations for more informations.
+                </li>
                 <br />
               </ul>
             </li>
@@ -226,12 +249,10 @@
           if (!file) return;
 
           const hash = await computeSHA256(file);
-          document.getElementById(
-            "yourHash"
-          ).textContent = `Your hash: ${hash}`;
-          document.getElementById(
-            "correctHash"
-          ).textContent = `Correct hash: ${expectedHash}`;
+          document.getElementById("yourHash").textContent =
+            `Your hash: ${hash}`;
+          document.getElementById("correctHash").textContent =
+            `Correct hash: ${expectedHash}`;
 
           if (hash === expectedHash) {
             document.getElementById("matchResult").textContent =
