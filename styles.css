@@ -13,8 +13,18 @@
 }
 
 /* Transition for smooth theme change */
-body, header, footer, main, section, .btn, a, .code-block {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+body,
+header,
+footer,
+main,
+section,
+.btn,
+a,
+.code-block {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
 }
 
 * {
@@ -110,7 +120,9 @@ nav {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-30px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
   z-index: 999;
 }
 
@@ -196,15 +208,19 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #d4d8e0;
 }
-.title{
+.title {
   font-size: 2.2rem;
   margin-bottom: 1rem;
 }
 
-p, a, li{
+p,
+a,
+li {
   color: #afb4c4;
   font-size: 1.1rem;
 }
@@ -242,13 +258,15 @@ p, a, li{
 }
 
 /* ===== LISTS ===== */
-.features-list, .contact-list {
+.features-list,
+.contact-list {
   list-style: none;
   margin: 1.2em 0;
   padding: 0;
 }
 
-.features-list li, .contact-list li {
+.features-list li,
+.contact-list li {
   position: relative;
   margin: 0.6em 0;
   padding: 0.6em 1em;
@@ -256,16 +274,19 @@ p, a, li{
   border-radius: 3px;
 }
 
-.features-list li:hover, .contact-list li:hover {
+.features-list li:hover,
+.contact-list li:hover {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.features-list a, .contact-list a {
+.features-list a,
+.contact-list a {
   color: #8aa8ff;
   text-decoration: underline;
 }
 
-.features-list a:hover, .contact-list a:hover {
+.features-list a:hover,
+.contact-list a:hover {
   color: #aabaff;
   text-decoration: none;
 }
@@ -333,7 +354,8 @@ footer {
 }
 
 /* ===== DOWNLOAD / GUIDE / CODE BLOCKS ===== */
-.downloads, .file-upload-wrapper {
+.downloads,
+.file-upload-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -404,7 +426,9 @@ footer {
     padding: 2rem 0;
   }
 
-  .btn, .file-upload-wrapper, .downloads {
+  .btn,
+  .file-upload-wrapper,
+  .downloads {
     width: 100%;
     max-width: 400px;
     margin: 0.5rem auto;
@@ -416,38 +440,53 @@ footer {
 }
 
 /* ===== PRIVACY TEXT STYLING ===== */
+/* ===== LEGAL / TERMS TEXT ===== */
 .privacy-text {
+  max-width: 800px;
+  margin: 0 auto;
   color: var(--text-color);
-  font-size: 1.1rem;
-  line-height: 1.8; /* line spacing within a paragraph */
-}
-
-.privacy-text p {
-  display: block;
-  margin: 1rem 0 1.5rem 0; /* space above and below paragraph */
-}
-
-.privacy-text br {
-  display: block;
-  margin-bottom: 1rem; /* space for manual line breaks */
-}
-
-.privacy-text h1,
-.privacy-text h2,
-.privacy-text h3,
-.privacy-text .heading_1,
-.privacy-text .heading_2 {
-  margin: 2rem 0 1.5rem 0; /* spacing above and below headings */
-  font-weight: bold;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 
 .privacy-text ul,
 .privacy-text ol {
-  margin: 1.5rem 0 1.5rem 2.5rem;
-  padding: 0;
+  padding-left: 2rem;   /* controls the "tab" */
+  margin: 1rem 0 1.5rem;
 }
 
 .privacy-text li {
-  margin-bottom: 1rem;
-  list-style: disc;
+  margin-bottom: 0.6rem;
+}
+
+/* headings */
+.privacy-text h1 {
+  font-size: 2rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.privacy-text h2 {
+  font-size: 1.4rem;
+  margin: 2rem 0 0.8rem;
+  color: var(--link-color);
+}
+
+/* paragraphs */
+.privacy-text p {
+  margin: 0.8rem 0 1.4rem;
+}
+
+/* lists */
+.privacy-text ul {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.privacy-text li {
+  margin-bottom: 0.6rem;
+}
+
+/* subtle separation between sections */
+.privacy-text h2:not(:first-of-type) {
+  border-top: 1px solid var(--footer-border);
+  padding-top: 1.5rem;
 }
